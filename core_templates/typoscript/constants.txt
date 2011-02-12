@@ -1,0 +1,8 @@
+plugin.tx_adtemplavoilacycle {
+
+	# cat=ad: Templavoila Cycle/enable/001; type=boolean; label=LLL:EXT:ad_templavoila_cycle/lang/locallang.xml:constants.jQuery
+	jQuery = 1
+
+	# cat=ad: Templavoila Cycle/other/001; type=text; label=LLL:EXT:ad_templavoila_cycle/lang/locallang.xml:constants.style
+	style = EXT:ad_templavoila_cycle/res/css/simple.css
+}

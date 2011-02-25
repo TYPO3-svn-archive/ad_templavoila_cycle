@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="extensionConfiguration.label">Import template objects: Select a storage folder and import the template objects for the Cycle module onto your site.</label>
+
+			<label index="constants.jQuery">jQuery Library: Load jQuery library via Google AJAX Libraries API.</label>
+			<label index="constants.style">Your own CSS file: Location of your custom theme (eg. fileadmin/custom.css).</label>
+
+			<label index="fce.typeHeader">Cycle Module</label>
+
+			<label index="fce.width">Width:</label>
+			<label index="fce.height">Height:</label>
+			<label index="fce.navigation">Navigation Type:</label>
+			<label index="fce.navigation.none">No Navigation</label>
+			<label index="fce.navigation.browser">Browser</label>
+			<label index="fce.navigation.pagination">Pagination</label>
+			<label index="fce.effects">Transition effects:</label>
+			<label index="fce.effects.blindX">blindX</label>
+			<label index="fce.effects.blindY">blindY</label>
+			<label index="fce.effects.blindZ">blindZ</label>
+			<label index="fce.effects.cover">cover</label>
+			<label index="fce.effects.curtainX">curtainX</label>
+			<label index="fce.effects.curtainY">curtainY</label>
+			<label index="fce.effects.fade">fade</label>
+			<label index="fce.effects.fadeZoom">fadeZoom</label>
+			<label index="fce.effects.growX">growX</label>
+			<label index="fce.effects.growY">growY</label>
+			<label index="fce.effects.scrollUp">scrollUp</label>
+			<label index="fce.effects.scrollDown">scrollDown</label>
+			<label index="fce.effects.scrollLeft">scrollLeft</label>
+			<label index="fce.effects.scrollRight">scrollRight</label>
+			<label index="fce.effects.scrollHorz">scrollHorz</label>
+			<label index="fce.effects.scrollVert">scrollVert</label>
+			<label index="fce.effects.shuffle">shuffle</label>
+			<label index="fce.effects.slideX">slideX</label>
+			<label index="fce.effects.slideY">slideY</label>
+			<label index="fce.effects.toss">toss</label>
+			<label index="fce.effects.turnUp">turnUp</label>
+			<label index="fce.effects.turnDown">turnDown</label>
+			<label index="fce.effects.turnLeft">turnLeft</label>
+			<label index="fce.effects.turnRight">turnRight</label>
+			<label index="fce.effects.uncover">uncover</label>
+			<label index="fce.effects.wipe">wipe</label>
+			<label index="fce.effects.zoom">zoom</label>
+			<label index="fce.sync">Syncronize effects:</label>
+			<label index="fce.timeout">Interval:</label>
+			<label index="fce.continuous">Continuous:</label>
+			<label index="fce.speed">Speed:</label>
+			<label index="fce.speedIn">Speed In:</label>
+			<label index="fce.speedOut">Speed Out:</label>
+			<label index="fce.options">User defined options:</label>
+
+			<label index="template.prev">Previous</label>
+			<label index="template.next">Next</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="fce.typeHeader">Cycle-Modul</label>
+
+			<label index="fce.width">Breite:</label>
+			<label index="fce.height">Höhe:</label>
+			<label index="fce.navigation">Navigations Typ:</label>
+			<label index="fce.navigation.none">Keine Navigation</label>
+			<label index="fce.navigation.browse">Blättern</label>
+			<label index="fce.navigation.pagination">Paginierung</label>
+			<label index="fce.effects">Übergangseffekte:</label>
+			<label index="fce.sync">Syncronize effects (check if in/out transitions should occur simultaneously):</label>
+			<label index="fce.options">Benutzer definierte Optionen:</label>
+
+			<label index="template.prev">Zurück</label>
+			<label index="template.next">Weiter</label>
+		</languageKey>
+	</data>
+</T3locallang>

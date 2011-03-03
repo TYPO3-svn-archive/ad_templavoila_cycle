@@ -17,66 +17,21 @@ page.includeCSS {
 }
 
 page.jsInline {
-	# Remove URL of link and replace with anchor and initialize tabs. jQuery UI Tabs don't like RealURL anchors :(
-	8427 = COA
-	8427 {
-		wrap = jQuery(document).ready(function(){ | });
-
-		10 = COA
-		10 {
-			wrap = jQuery('.tx_adtemplavoilacycle .tx_adtemplavoilacycle_container').each(function(index, element){ jQuery(element).cycle({ | }); });
-
-			10 = TEXT
-			10.if.isTrue.data = register: field_effects
-			10.dataWrap = fx: '{register: field_effects}',
-
-			20 = TEXT
-			20.if.isFalse.data = register: field_sync
-			20.dataWrap = sync: 0,
-
-			30 = TEXT
-			30.if.isTrue.data = register: field_timeout
-			30.dataWrap = timeout: {register: field_timeout},
-
-			40 = TEXT
-			40.if.isTrue.data = register: field_continuous
-			40.dataWrap = continuous: 1,
-
-			50 = TEXT
-			50.if.isTrue.data = register: field_speed
-			50.dataWrap = speed: {register: field_speed},
-
-			60 = TEXT
-			60.if.isTrue.data = register: field_speed_in
-			60.dataWrap = speedIn: {register: field_speed_in},
-
-			70 = TEXT
-			70.if.isTrue.data = register: field_speed_out
-			70.dataWrap = speedOut: {register: field_speed_out},
-
-			# Default options.
-			# Option pagerAnchorBuilder must be set to remove the pagination builder. So it can be set in the template manually. Must return a single pager item.
-			80 = HTML
-			80.value = pager: '.tx_adtemplavoilacycle .tx_adtemplavoilacycle_pagination ul', prev: '.tx_adtemplavoilacycle .tx_adtemplavoilacycle_browser .prev', next: '.tx_adtemplavoilacycle .tx_adtemplavoilacycle_browser .next', pagerAnchorBuilder: function(index, element){ return jQuery('.tx_adtemplavoilacycle .tx_adtemplavoilacycle_pagination a:eq('+index+')'); }
-
-			# User defined options
-			90 = TEXT
-			90.if.isTrue.data = register: field_options
-			90.data = register: field_options
-			90.wrap = ,|
-		}
-	}
+	8427 = TEXT
+	8427.data = register: tx_adtemplavoilacycle_javascript
+	8427.wrap = jQuery(document).ready(function(){ | });
+	8427.required = 1
 }
 
 codeCycle >
 codeCycle = COA
 codeCycle {
-	stdWrap.dataWrap = <div id="tx_adtemplavoilacycle_uid_{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilacycle"{register: container_style}> | </div>
+	stdWrap.dataWrap = <div id="tx_adtemplavoilacycle_uid_{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilacycle"{register: tx_adtemplavoilacycle_container_style}> | </div>
 
 	10 = LOAD_REGISTER
 	10 {
-		container_style.cObject = COA
-		container_style.cObject {
+		tx_adtemplavoilacycle_container_style.cObject = COA
+		tx_adtemplavoilacycle_container_style.cObject {
 			stdWrap.required = 1
 			stdWrap.noTrimWrap = | style="|"|
 
@@ -95,18 +50,89 @@ codeCycle {
 			}
 		}
 
-		field_effects.field = field_effects
-		field_sync.field = field_sync
-		field_timeout.field = field_timeout
-		field_continuous.field = field_continuous
-		field_speed.field = field_speed
-		field_speed_in.field = field_speed_in
-		field_speed_out.field = field_speed_out
-		field_options.field = field_options
+		tx_adtemplavoilacycle_id = tx_adtemplavoilacycle_uid_{register: tx_templavoila_pi1.parentRec.uid}
+		tx_adtemplavoilacycle_id.insertData = 1
+
+		tx_adtemplavoilacycle_effects.field = field_effects
+		tx_adtemplavoilacycle_sync.field = field_sync
+		tx_adtemplavoilacycle_timeout.field = field_timeout
+		tx_adtemplavoilacycle_continuous.field = field_continuous
+		tx_adtemplavoilacycle_speed.field = field_speed
+		tx_adtemplavoilacycle_speed_in.field = field_speed_in
+		tx_adtemplavoilacycle_speed_out.field = field_speed_out
+		tx_adtemplavoilacycle_options.field = field_options
+
+		# Save JavaScript to append multiple settings.
+		tx_adtemplavoilacycle_javascript_temp.data = register: tx_adtemplavoilacycle_javascript
+		tx_adtemplavoilacycle_javascript.cObject = COA
+		tx_adtemplavoilacycle_javascript.cObject {
+			10 = TEXT
+			10.data = register: tx_adtemplavoilacycle_javascript_temp
+
+			20 = COA
+			20 {
+				stdWrap.outerWrap.cObject = COA
+				stdWrap.outerWrap.cObject {
+					10 = TEXT
+					10.data = register: tx_adtemplavoilacycle_id
+					10.noTrimWrap = |jQuery('#| .tx_adtemplavoilacycle_container')|
+
+					20 = TEXT
+					20.value = .each(function(index, element){ jQuery(element).cycle({ | }); });
+				}
+
+				10 = TEXT
+				10.if.isTrue.data = register: tx_adtemplavoilacycle_effects
+				10.dataWrap = fx: '{register: tx_adtemplavoilacycle_effects}',
+
+				20 = TEXT
+				20.if.isFalse.data = register: tx_adtemplavoilacycle_sync
+				20.dataWrap = sync: 0,
+
+				30 = TEXT
+				30.if.isTrue.data = register: tx_adtemplavoilacycle_timeout
+				30.dataWrap = timeout: {register: tx_adtemplavoilacycle_timeout},
+
+				40 = TEXT
+				40.if.isTrue.data = register: tx_adtemplavoilacycle_continuous
+				40.dataWrap = continuous: 1,
+
+				50 = TEXT
+				50.if.isTrue.data = register: tx_adtemplavoilacycle_speed
+				50.dataWrap = speed: {register: tx_adtemplavoilacycle_speed},
+
+				60 = TEXT
+				60.if.isTrue.data = register: tx_adtemplavoilacycle_speed_in
+				60.dataWrap = speedIn: {register: tx_adtemplavoilacycle_speed_in},
+
+				70 = TEXT
+				70.if.isTrue.data = register: tx_adtemplavoilacycle_speed_out
+				70.dataWrap = speedOut: {register: tx_adtemplavoilacycle_speed_out},
+
+				# Default options.
+				80 = COA
+				80 {
+					10 = TEXT
+					10.value = pager: '#{register: tx_adtemplavoilacycle_id} .tx_adtemplavoilacycle_pagination ul', prev: '#{register: tx_adtemplavoilacycle_id} .tx_adtemplavoilacycle_browser .prev', next: '#{register: tx_adtemplavoilacycle_id} .tx_adtemplavoilacycle_browser .next',
+					10.insertData = 1
+
+					# Option pagerAnchorBuilder must be set to remove the pagination builder. So it can be set in the template manually. Must return a single pager item.
+					20 = TEXT
+					20.data = register: tx_adtemplavoilacycle_id
+					20.noTrimWrap = |pagerAnchorBuilder: function(index, element){ return jQuery('#| .tx_adtemplavoilacycle_pagination a:eq('+index+')'); }|
+				}
+
+				# User defined options
+				90 = TEXT
+				90.if.isTrue.data = register: tx_adtemplavoilacycle_options
+				90.data = register: tx_adtemplavoilacycle_options
+				90.wrap = ,|
+			}
+		}
 	}
 
-	20 = CASE
-	20 {
+	30 = CASE
+	30 {
 		key.field = field_navigation
 		browser = TEXT
 		browser {
@@ -129,8 +155,8 @@ codeCycle {
 		}
 	}
 
-	30 = RECORDS
-	30 {
+	40 = RECORDS
+	40 {
 		stdWrap.dataWrap = <div class="tx_adtemplavoilacycle_container"{register: container_style}> | </div>
 		source.current = 1
 		tables = tt_content

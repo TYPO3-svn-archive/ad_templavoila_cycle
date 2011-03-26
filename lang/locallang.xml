@@ -9,6 +9,9 @@
 
 			<label index="fce.typeHeader">Cycle Module</label>
 
+			<label index="fce.type">Type:</label>
+			<label index="fce.type.content">Content elements</label>
+			<label index="fce.type.images">Images</label>
 			<label index="fce.width">Width:</label>
 			<label index="fce.height">Height:</label>
 			<label index="fce.navigation">Navigation Type:</label>
@@ -50,6 +53,8 @@
 			<label index="fce.speedIn">Speed In:</label>
 			<label index="fce.speedOut">Speed Out:</label>
 			<label index="fce.options">User defined options:</label>
+			<label index="fce.cycle">Content elements:</label>
+			<label index="fce.cycleImages">Images:</label>
 
 			<label index="template.prev">Previous</label>
 			<label index="template.next">Next</label>
@@ -57,6 +62,9 @@
 		<languageKey index="de" type="array">
 			<label index="fce.typeHeader">Cycle-Modul</label>
 
+			<label index="fce.type">Type:</label>
+			<label index="fce.type.content">Seiteninhalte</label>
+			<label index="fce.type.images">Bilder</label>
 			<label index="fce.width">Breite:</label>
 			<label index="fce.height">Höhe:</label>
 			<label index="fce.navigation">Navigations Typ:</label>
@@ -66,6 +74,8 @@
 			<label index="fce.effects">Übergangseffekte:</label>
 			<label index="fce.sync">Syncronize effects (check if in/out transitions should occur simultaneously):</label>
 			<label index="fce.options">Benutzer definierte Optionen:</label>
+			<label index="fce.cycle">Seiteninhalte:</label>
+			<label index="fce.cycleImages">Bilder:</label>
 
 			<label index="template.prev">Zurück</label>
 			<label index="template.next">Weiter</label>

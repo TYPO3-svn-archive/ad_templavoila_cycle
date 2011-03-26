@@ -155,10 +155,33 @@ codeCycle {
 		}
 	}
 
-	40 = RECORDS
+	40 = CASE
 	40 {
-		stdWrap.dataWrap = <div class="tx_adtemplavoilacycle_container"{register: container_style}> | </div>
-		source.current = 1
-		tables = tt_content
+		key.field = field_type
+
+		images < tt_content.image.20
+		images {
+			1.file.width.field = field_width
+			imgList.field = field_cycle_images
+			imgPath = uploads/pics/
+			layout.default.value = <div class="tx_adtemplavoilacycle_container"{register: tx_adtemplavoilacycle_container_style}>###IMAGES###</div>
+			layout.default.insertData = 1
+			imageStdWrap >
+			imageStdWrapNoWidth >
+			renderMethod = simple
+			rendering.simple.caption >
+			rendering.simple.imageStdWrap >
+			rendering.simple.imageStdWrapNoWidth >
+		}
+
+		content = RECORDS
+		content {
+			stdWrap.dataWrap = <div class="tx_adtemplavoilacycle_container"{register: tx_adtemplavoilacycle_container_style}> | </div>
+			source.current = 1
+			tables = tt_content
+			conf.tt_content < tt_content
+			# Delete localized links between the content records.
+			conf.tt_content.stdWrap.prepend >
+		}
 	}
 }

@@ -11,3 +11,5 @@
 1.0.3	[FEATURE] Added image content type.
 		[BUGFIX] Fixed style attribute of container. Was wrong register key.
 		[TASK] Removed localized links between content elements on multilingual pages.
+
+1.0.4	[BUGFIX] Fixed bug in TSsetup which generated invalid HTML.

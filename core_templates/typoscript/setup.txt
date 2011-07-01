@@ -45,7 +45,7 @@ codeCycle {
 			20 = TEXT
 			20 {
 				field = field_height
-				wrap = height: | px;"
+				wrap = height: | px;
 				fieldRequired = field_height
 			}
 		}
